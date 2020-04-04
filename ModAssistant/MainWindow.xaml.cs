@@ -51,17 +51,6 @@ namespace ModAssistant
 
             VersionText.Text = App.Version;
 
-            if (Utils.IsVoid())
-            {
-                Main.Content = Invalid.Instance;
-                MainWindow.Instance.ModsButton.IsEnabled = false;
-                MainWindow.Instance.OptionsButton.IsEnabled = false;
-                MainWindow.Instance.IntroButton.IsEnabled = false;
-                MainWindow.Instance.AboutButton.IsEnabled = false;
-                MainWindow.Instance.GameVersionsBox.IsEnabled = false;
-                return;
-            }
-
             Themes.LoadThemes();
             Themes.FirstLoad(Properties.Settings.Default.SelectedTheme);
 
